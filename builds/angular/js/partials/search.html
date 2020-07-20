@@ -41,6 +41,7 @@
       <ul class=" list-group d-flex" >
         <li class="list-group-item" ng-repeat="item in artists | filter:query| orderBy:artistOrder:direction ">
 
+          <a href="#/details/{{artists.indexOf(item)}}">
             <div class="media d-flex align-items-center">
               <img class="rounded-circle mr-3g"
                 ng-src="images/{{item.shortname}}_tn.jpg"
@@ -50,6 +51,7 @@
                 <div class="text-secondary font-italic">{{item.reknown | lowercase}}</div>
               </div><!-- media-body -->
             </div><!-- media -->
+          </a>
 
         </li>
       </ul>
