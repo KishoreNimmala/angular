@@ -4,8 +4,13 @@ var myApp=angular.module('myApp',[
 ]);
 
 myApp.config(['$routeProvider',function($routeProvider){
-	$routeProvider.when('/',{
+	$routeProvider
+	.when('/',{
 		templateUrl:'js/partials/search.html',
 		controller: 'SearchController'
+	})
+	.when('/details',{
+		templateUrl:'js/partials/details.html',
+		controller: 'DetailsController'
 	});
 }]);
